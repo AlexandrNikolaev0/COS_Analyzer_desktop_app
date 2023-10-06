@@ -1,0 +1,26 @@
+<RCC>
+  <qresource>
+    <file>imgs/StopBtnIcon.png</file>
+    <file>imgs/eyePassIcon.png</file>
+    <file>imgs/up-arrow.png</file>
+    <file>imgs/Burner.png</file>
+    <file>imgs/CLMeter.png</file>
+    <file>imgs/down-arrow.png</file>
+    <file>imgs/IconExit.png</file>
+    <file>imgs/BinBtnIcon.png</file>
+    <file>imgs/SampleBtnIcon.png</file>
+    <file>imgs/StartBtnIcon.png</file>
+    <file>imgs/StartBtnIcon.png</file>
+    <file>imgs/StateBtnIcon.png</file>
+    <file>imgs/logo-gazprom-neft.png</file>
+    <file>imgs/arrowComboBox.png</file>
+    <file>imgs/LogoGaz.png</file>
+    <file>imgs/authBackground.png</file>
+    <file>imgs/BinBtn.png</file>
+    <file>imgs/SampleBtn.png</file>
+    <file>imgs/StartBtn.png</file>
+    <file>imgs/StateBtn.png</file>
+    <file>imgs/StopBtn.png</file>
+    <file>imgs/authBackground.png</file>
+  </qresource>
+</RCC>

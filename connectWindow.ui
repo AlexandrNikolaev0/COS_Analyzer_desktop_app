@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConnectWindow</class>
+ <widget class="QMainWindow" name="ConnectWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>838</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1440</width>
+    <height>838</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1440</width>
+    <height>838</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/imgs/authBackground.png);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">color:FFFFFF
+</string>
+   </property>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>429</x>
+      <y>211</y>
+      <width>582</width>
+      <height>417</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>582</width>
+      <height>417</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>582</width>
+      <height>417</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget { /* Auto layout */
+
+
+position: absolute;
+width: 582px;
+height: 439px;
+left: 80px;
+top: 60px;
+
+background: #FFFFFF;
+border-radius: 6px; }</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>24</number>
+     </property>
+     <property name="leftMargin">
+      <number>70</number>
+     </property>
+     <property name="topMargin">
+      <number>24</number>
+     </property>
+     <property name="rightMargin">
+      <number>70</number>
+     </property>
+     <property name="bottomMargin">
+      <number>50</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>81</horstretch>
+         <verstretch>149</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>149</width>
+         <height>81</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>149</width>
+         <height>81</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/imgs/logo-gazprom-neft.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>16</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="devices_label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#devices_label{
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+color: rgba(0, 32, 51, 0.6);
+}</string>
+         </property>
+         <property name="text">
+          <string>Доступные устройства</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QComboBox" name="devices_comboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>48</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>48</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#devices_comboBox{
+
+height:48px;
+/* control-default/bg */
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+
+padding-left: 13px;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+color: black;
+outline: 0px;
+}
+
+#devices_comboBox::drop-down{
+border: 0px;
+width: 48px;
+}
+
+#devices_comboBox::down-arrow {
+    image: url(:/imgs/arrowComboBox.png);
+width: 48px;
+}
+
+#devices_comboBox::on {
+border: 1px solid #0091FF;
+outline: 0px;
+}
+
+#devices_comboBox QListView {
+outline-color: #fff;
+background-color: #fff;
+
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+
+border-radius: 4px;
+margin-top: 7px;
+outline: 0px;
+
+selection-background-color: rgba(0, 32, 51, 0.05);
+selection-color: black;
+
+padding-top:10px;
+padding-bottom:10px;
+padding-left:12px;
+padding-right:12px;
+
+}
+
+#devices_comboBox QAbstractItemView::text {
+
+padding:10px;
+}
+
+
+
+
+</string>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="currentText">
+             <string>Выберите устройство...</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>10</number>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtBottom</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>48</width>
+              <height>48</height>
+             </size>
+            </property>
+            <property name="duplicatesEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="frame">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>Выберите устройство...</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>COM2</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="connect_statusLabel">
+            <property name="styleSheet">
+             <string notr="true">#connect_statusLabel{
+min-height:14px;
+max-height:14px;
+height:14px;
+padding-left:13px;
+color: #EB3333;
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 120%;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="connect_pushButton">
+         <property name="styleSheet">
+          <string notr="true">#connect_pushButton{
+width: 441px;
+height: 40px;
+
+/* control-primary/bg */
+
+
+background: #0078D2;
+border-radius: 20px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+
+
+/* control-primary/typo */
+
+color: #FFFFFF;
+}
+
+#connect_pushButton::hover{
+background: rgb(0, 134, 229);
+
+}
+
+#connect_pushButton::pressed{
+
+border: 4px solid rgb(0, 101, 173);
+}</string>
+         </property>
+         <property name="text">
+          <string>Подключить устройство</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="updateDevices_pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#updateDevices_pushButton{
+width: 441px;
+height: 40px;
+
+/* control-primary/bg */
+
+
+background: #fff;
+border-radius: 20px;
+border: 1px solid #0078D2;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+
+
+/* control-primary/typo */
+
+color: #0078D2;
+}
+
+#updateDevices_pushButton::hover{
+background: rgb(205, 238, 255);
+
+}
+
+#updateDevices_pushButton::pressed{
+
+border: 4px solid rgb(139, 205, 255);
+}</string>
+         </property>
+         <property name="text">
+          <string>Обновить устройства</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

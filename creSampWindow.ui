@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>creSampWindow</class>
+ <widget class="QDialog" name="creSampWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1182</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Создание группы образцов</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #fff;
+border-radius: 8px;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>32</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+
+/* bg/tone */
+
+color: rgba(0, 32, 51, 0.85);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Создание группы образцов</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="spacing">
+       <number>32</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QWidget" name="widget_4" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="groupName_label">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Имя группы образцов</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="groupName_lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>Группа 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QWidget" name="widget_6" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="sampleNum_label">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Число образцов</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sampleNum_spinBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+height: 40px;
+
+padding: 0px 11px;
+gap: 12px;
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+}
+
+
+QSpinBox::up-button {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+}
+
+QSpinBox::down-button {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+}
+
+
+QSpinBox::up-button:pressed {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}
+
+QSpinBox::down-button:pressed {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}</string>
+              </property>
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QWidget" name="widget_5" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="expType_label">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Тип экспермента</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="expType_comboBox">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+
+#expType_comboBox{
+height: 40px;
+/* control-default/bg */
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+padding-left: 13px;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+color: rgba(0, 32, 51, 0.35);
+outline: 0px;
+}
+
+#expType_comboBox::down-arrow {
+image: url(:/imgs/arrowComboBox.png);
+width: 40px;
+}
+
+#expType_comboBox::drop-down{
+border: 0px;
+width: 40px;
+}
+
+
+
+
+#expType_comboBox::on {
+border: 1px solid #0091FF;
+outline: 0px;
+}
+
+#expType_comboBox QListView {
+outline-color: #fff;
+background-color: #fff;
+
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+
+border-radius: 4px;
+margin-top: 7px;
+outline: 0px;
+
+selection-background-color: rgba(0, 32, 51, 0.05);
+selection-color: black;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:12px;
+padding-right:12px;
+}
+
+#expType_comboBox QAbstractItemView::text {
+
+padding: 10px;
+}
+
+
+
+
+</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>По умолчанию</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QWidget" name="widget_7" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="pos_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Первая позиция</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="pos_comboBox_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
+
+#pos_comboBox_2{
+height: 40px;
+/* control-default/bg */
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+padding-left: 13px;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+color: rgba(0, 32, 51, 0.35);
+outline: 0px;
+}
+
+#pos_comboBox_2::down-arrow {
+image: url(:/imgs/arrowComboBox.png);
+width: 40px;
+}
+
+#pos_comboBox_2::drop-down{
+border: 0px;
+width: 40px;
+}
+
+
+
+
+#expType_comboBox::on {
+border: 1px solid #0091FF;
+outline: 0px;
+}
+
+#expType_comboBox QListView {
+outline-color: #fff;
+background-color: #fff;
+
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+
+border-radius: 4px;
+margin-top: 7px;
+outline: 0px;
+
+selection-background-color: rgba(0, 32, 51, 0.05);
+selection-color: black;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:12px;
+padding-right:12px;
+}
+
+#expType_comboBox QAbstractItemView::text {
+
+padding: 10px;
+}
+
+
+
+
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Tray 1</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QWidget" name="widget_8" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="repeatSampleNum_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Количество повторов образцов</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="repeatSampleNum_spinBox_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QSpinBox
+{
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+height: 40px;
+
+padding: 0px 11px;
+gap: 12px;
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+}
+
+
+QSpinBox::up-button {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+}
+
+QSpinBox::down-button {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+}
+
+
+QSpinBox::up-button:pressed {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}
+
+QSpinBox::down-button:pressed {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}</string>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QWidget" name="widget_9" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="razbav_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Разбавление</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="razbav_lineEdit_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QWidget" name="widget_10" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="plotn_label_2">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Плотность</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="plotn_lineEdit_2">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="5" column="1">
+          <widget class="QSpinBox" name="pos_spinBox_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSpinBox
+{
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+height: 40px;
+
+padding: 0px 11px;
+gap: 12px;
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+margin-top: 25px;
+}
+
+
+QSpinBox::up-button {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+}
+
+QSpinBox::down-button {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+}
+
+
+QSpinBox::up-button:pressed {
+width:40px;
+image:url(:/imgs/up-arrow.png);
+padding-top:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}
+
+QSpinBox::down-button:pressed {
+image:url(:/imgs/down-arrow.png);
+width:40px;
+padding-bottom:4px;
+border: 1px solid rgba(0, 66, 105, 0.28);
+}</string>
+           </property>
+           <property name="value">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QRadioButton" name="autosampler_rButton">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+
+spacing: 12px;
+/* control-default/typo */
+
+color: #002033;
+}
+
+QRadioButton::indicator{
+width: 16px;
+height: 16px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Автосемплер</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="minimumSize">
+         <size>
+          <width>1</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgba(0, 32, 51, 0.3);
+width: 1px;</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_11" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="sampleName_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Имя пробы: </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="sampleName_lineEdit_2">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>Проба 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_12" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="value_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Количество:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="value_lineEdit_2">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_13" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="razmConcentr_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Размерность концентрации:</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="razmConcentr_comboBox_2">
+              <property name="styleSheet">
+               <string notr="true">
+
+#razmConcentr_comboBox_2{
+height: 40px;
+/* control-default/bg */
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+padding-left: 13px;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+color: rgba(0, 32, 51, 0.35);
+outline: 0px;
+}
+
+#razmConcentr_comboBox_2::down-arrow {
+image: url(:/imgs/arrowComboBox.png);
+width: 40px;
+}
+
+#razmConcentr_comboBox_2::drop-down{
+border: 0px;
+width: 40px;
+}
+
+
+
+
+#razmConcentr_comboBox_2::on {
+border: 1px solid #0091FF;
+outline: 0px;
+}
+
+#razmConcentr_comboBox_2 QListView {
+outline-color: #fff;
+background-color: #fff;
+
+font-family: 'Segoe UI';
+font-weight: 400;
+font-style: normal;
+font-size: 16px;
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+
+border-radius: 4px;
+margin-top: 7px;
+outline: 0px;
+
+selection-background-color: rgba(0, 32, 51, 0.05);
+selection-color: black;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:12px;
+padding-right:12px;
+}
+
+#razmConcentr_comboBox_2 QAbstractItemView::text {
+
+padding: 10px;
+}
+
+
+
+
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>ммоль/л</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_14" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="operator_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Оператор:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="operator_lineEdit_2">
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="text">
+               <string>Оператор 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_15" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="comment_label_2">
+              <property name="styleSheet">
+               <string notr="true">width: 152px;
+height: 21px;
+
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+/* identical to box height, or 21px */
+
+/* typo/primary */
+
+color: #002033;</string>
+              </property>
+              <property name="text">
+               <string>Комментарий:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="comment_plainTextEdit_2">
+              <property name="styleSheet">
+               <string notr="true">padding: 0px 11px;
+gap: 12px;
+
+position: absolute;
+height: 40px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/bg-border */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 4px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;</string>
+              </property>
+              <property name="plainText">
+               <string>Комментарий 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>1142</width>
+       <height>33</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1142</width>
+       <height>33</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="spacing">
+       <number>12</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancelSampButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#cancelSampButton{
+
+height: 32px;
+width: 81px;
+/* control-primary/bg */
+
+
+background: #fff;
+border-radius: 16px;
+border: 1px solid #0078D2;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+
+
+/* control-primary/typo */
+
+color: #0078D2;
+}
+
+#cancelSampButton::hover{
+background: rgb(205, 238, 255);
+
+}
+
+#cancelSampButton::pressed{
+
+border: 4px solid rgb(139, 205, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>Отмена</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addSampButton">
+        <property name="minimumSize">
+         <size>
+          <width>94</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>94</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#addSampButton{
+
+
+/* control-primary/bg */
+
+
+background: #0078D2;
+border-radius: 16px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+
+
+/* control-primary/typo */
+
+color: #FFFFFF;
+}
+
+#addSampButton::hover{
+background: rgb(0, 134, 229);
+
+}
+
+#addSampButton::pressed{
+
+border: 4px solid rgb(0, 101, 173);
+}</string>
+        </property>
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

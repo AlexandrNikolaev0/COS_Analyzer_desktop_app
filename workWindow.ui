@@ -1,0 +1,1965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WorkWindow</class>
+ <widget class="QMainWindow" name="WorkWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>838</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1440</width>
+    <height>838</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1440</width>
+    <height>838</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Рабочее окно</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#FFFFFF;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">color:FFFFFF
+</string>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>92</y>
+      <width>1385</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#tabWidget {
+
+background: white;
+outline: 0px;
+}
+#tabWidget:pane {
+border: 0px;
+}
+
+#tabWidget:tab-bar {
+    alignment: left;
+}
+
+#tabWidget QTabBar{
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+color: rgba(0, 57, 92, 0.8);
+
+}
+
+#tabWidget QTabBar::tab{
+margin:4px;
+padding:8px;
+border-bottom: 2px solid rgba(0, 66, 105, 0.07);
+background-color: #fff;
+border-radius: 1px;
+}
+
+#tabWidget QTabBar::tab::selected{
+
+
+border-bottom: 2px solid #0078D2;
+background-color: #fff;
+
+border-radius: 1px;
+color: #0078D2;
+}
+
+#tabWidget QTabBar::tab::hover{
+
+
+border-bottom: 2px solid rgb(33, 170, 255);
+background-color: #fff;
+
+border-radius: 1px;
+color: rgb(33, 170, 255);
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>Статус системы</string>
+     </attribute>
+     <widget class="QLabel" name="statusHeader_label">
+      <property name="geometry">
+       <rect>
+        <x>22</x>
+        <y>40</y>
+        <width>178</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Inter</family>
+        <pointsize>-1</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">width: 175px;
+height: 30px;
+
+/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+
+color: #002033;</string>
+      </property>
+      <property name="text">
+       <string>Статус устройств</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="graph_label">
+      <property name="geometry">
+       <rect>
+        <x>405</x>
+        <y>15</y>
+        <width>971</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border-left: 1px solid #ECF1F4;</string>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="MplWidget" name="MplWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>30</y>
+        <width>971</width>
+        <height>591</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>46</x>
+        <y>94</y>
+        <width>333</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* bg/tone */
+
+color: rgba(0, 32, 51, 0.85);</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>12</number>
+       </property>
+       <property name="topMargin">
+        <number>16</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>11</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>16</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>32</number>
+       </property>
+       <item row="0" column="1">
+        <widget class="QLabel" name="Controller_label">
+         <property name="toolTip">
+          <string>Информация о контроллере</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о контроллере</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Контроллер анализатора</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="cellTemp_label">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре ячейки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре ячейки2</string>
+         </property>
+         <property name="text">
+          <string>Регулятор температуры ячейки</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="outerTemp_label">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре регулятора внешней трубки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре регулятора внешней трубки2</string>
+         </property>
+         <property name="text">
+          <string>Регулятор температуры внешней трубки</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="innerTemp_label">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре регулятора внутренней трубки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре регулятора внутренней трубки2</string>
+         </property>
+         <property name="text">
+          <string>Регулятор температуры внутренней трубки</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="sampler_label">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Информация об устройстве ввода проб1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация об устройстве ввода проб2</string>
+         </property>
+         <property name="text">
+          <string>Устройство ввода проб</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="CLMeter_label">
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>-1</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Информация о кулонометре1</string>
+         </property>
+         <property name="toolTipDuration">
+          <number>-2</number>
+         </property>
+         <property name="statusTip">
+          <string>Информация о кулонометре2</string>
+         </property>
+         <property name="text">
+          <string>Кулонометр</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="ControllerIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация о контроллере</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о контроллере</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ControllerIndicator_label {
+background-color:#EB5757;
+border-radius: 5px;
+
+}
+
+QToolTip {
+
+/* bg/default
+
+Основной цвет фона
+*/
+
+opacity: 90;
+border: 8px solid black;
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 120%;
+color: #002033;
+min-width: 233px;
+min-height: 49px;
+text-align:center;
+padding:15px;
+
+border-left-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:0 rgba(200, 200, 200, 80), stop:1 rgba(255, 255, 255, 0));
+border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(200, 200, 200, 80), stop:1 rgba(255, 255, 255, 0));
+border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(200, 200, 200, 80), stop:1 rgba(255, 255, 255, 0));
+border-top-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(200, 200, 200, 80), stop:1 rgba(255, 255, 255, 0));
+
+}
+
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="outerTempIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре регулятора внешней трубки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре регулятора внешней трубки2</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color:#EB5757;
+border-radius: 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="innerTempIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>10</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре регулятора внутренней трубки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре регулятора внутренней трубки2</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color:#EB5757;
+border-radius: 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="cellTempIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация о температуре ячейки1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация о температуре ячейки2</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color:#EB5757;
+border-radius: 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="samplerIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация об устройстве ввода проб1</string>
+         </property>
+         <property name="statusTip">
+          <string>Информация об устройстве ввода проб2</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color:#EB5757;
+border-radius: 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="CLMeterIndicator_label">
+         <property name="minimumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>15</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Информация о кулонометре1</string>
+         </property>
+         <property name="toolTipDuration">
+          <number>-1</number>
+         </property>
+         <property name="statusTip">
+          <string>Информация о кулонометре2</string>
+         </property>
+         <property name="whatsThis">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+background-color:#EB5757;
+border-radius: 5px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Визуальный статус устройств</string>
+     </attribute>
+     <widget class="QLabel" name="devices_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>103</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Устройства */
+
+
+width: 113px;
+height: 30px;
+
+/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+
+
+/* bg/shadow */
+
+color: #002033;</string>
+      </property>
+      <property name="text">
+       <string>Устройства</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>94</y>
+        <width>1381</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1381</width>
+        <height>551</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1381</width>
+        <height>551</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#tabWidget_2 {
+
+background: white;
+outline: 0px;
+}
+#tabWidget_2:pane {
+border: 0px;
+}
+
+#tabWidget_2:tab-bar {
+    alignment: left;
+}
+
+#tabWidget_2 QTabBar{
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+color: rgba(0, 57, 92, 0.8);
+
+}
+
+#tabWidget_2 QTabBar::tab{
+margin:4px;
+padding:8px;
+border-right: 2px solid rgba(0, 66, 105, 0.07);
+background-color: #fff;
+border-radius: 1px;
+}
+
+#tabWidget_2 QTabBar::tab::selected{
+
+
+border-right: 2px solid #0078D2;
+background-color: #fff;
+
+border-radius: 1px;
+color: #0078D2;
+}
+
+#tabWidget_2 QTabBar::tab::hover{
+
+
+border-right: 2px solid rgb(33, 170, 255);
+background-color: #fff;
+
+border-radius: 1px;
+color: rgb(33, 170, 255);
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Печь</string>
+       </attribute>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1300</width>
+          <height>540</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1300</width>
+          <height>540</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1300</width>
+          <height>540</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/imgs/Burner.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Кулонометр</string>
+       </attribute>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1300</width>
+          <height>500</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>1300</width>
+          <height>500</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1300</width>
+          <height>500</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>1300</width>
+          <height>450</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/imgs/CLMeter.png);
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <attribute name="title">
+        <string>Автосемплер</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Диспетчер задач</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>172</y>
+        <width>1381</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>801</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#tableWidget {
+/* Table */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+box-sizing: border-box;
+
+/* Auto layout */
+
+border-radius: 8px;
+/* control-default/bg-border */
+
+
+
+}
+
+#tableWidget QHeaderView::section:first {
+
+border-top-left-radius: 8px;
+border-left: 1px solid rgba(0, 66, 105, 0.28);
+alignment: left ;
+width: 353px;
+}
+
+#tableWidget QHeaderView::section{
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+
+
+color: #002033;
+
+
+height:58px;
+background: #FFFFFF;
+border-left: 0px solid rgba(0, 66, 105, 0.28);
+border-top: 1px solid rgba(0, 66, 105, 0.28);
+border-right: 1px solid rgba(0, 66, 105, 0.28);
+border-bottom: 1px solid rgba(0, 66, 105, 0.28);
+}
+
+#tableWidget QHeaderView::section:last {
+
+border-top-right-radius: 8px;
+
+}
+
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="autoScrollMargin">
+       <number>12</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::NoDragDrop</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>1</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>150</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>10</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <column>
+       <property name="text">
+        <string>   Описание</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Состояние</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>   Время создания</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>   Запуск отсчета времени</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>   Время остановки</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>   Общее время</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>   Действие</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>530</y>
+        <width>1381</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+border-radius: 8px;</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1379</width>
+         <height>98</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;</string>
+       </property>
+       <widget class="QLabel" name="descriptin_label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>1381</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+border-radius:8px;
+margin-bottom:2px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="actions_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>16</y>
+        <width>95</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>95</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>95</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Действия */
+
+
+width: 95px;
+height: 30px;
+
+/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 30px */
+
+
+
+/* bg/shadow */
+
+color: #002033;</string>
+      </property>
+      <property name="text">
+       <string>Действия</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>48</y>
+        <width>300</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Выберете строку чтобы применить действие */
+
+
+width: 268px;
+height: 18px;
+
+/* XS */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+/* identical to box height, or 18px */
+
+/* typo/secondary */
+
+color: rgba(0, 32, 51, 0.6);</string>
+      </property>
+      <property name="text">
+       <string>Выберите строку чтобы применить действие</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="controlPanel" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>74</y>
+        <width>484</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>484</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>484</width>
+        <height>34</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="StartBtn">
+         <property name="minimumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#StartBtn{
+box-sizing: border-box;
+
+align: top;
+
+/* control-default/bg */
+
+background: #FFFFFF;
+/* control-default/typo-placeholder */
+
+border: 1px solid #09B37B;
+
+border-radius: 4px;
+}
+
+#StartBtn::hover {
+border: 1px solid rgb(10, 221, 151);
+
+}
+
+#StartBtn::pressed {
+border: 2px solid #09B37B;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/imgs/StartBtnIcon.png</normaloff>:/imgs/StartBtnIcon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SysMethBtn">
+         <property name="minimumSize">
+          <size>
+           <width>213</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>213</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#SysMethBtn {
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 20px 0px 16px;
+spacing: 11px;
+
+width: 223px;
+height: 32px;
+
+/* control-default/typo-placeholder */
+
+border: 1px solid #0078D2;
+border-radius: 16px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 32px;
+/* identical to box height, or 229% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* control-default/typo-placeholder */
+
+color: #0078D2;
+spacing:10px;
+}
+
+#SysMethBtn::hover {
+
+border: 1px solid rgb(0, 149, 255);
+color: rgb(0, 149, 255);
+}
+
+#SysMethBtn::pressed {
+border: 2px solid #0078D2;
+}</string>
+         </property>
+         <property name="text">
+          <string>Выбрать режим работы</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/imgs/StateBtnIcon.png</normaloff>:/imgs/StateBtnIcon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="CreSampBtn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>223</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>223</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#CreSampBtn {
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 20px 0px 16px;
+spacing: 11px;
+
+width: 223px;
+height: 32px;
+
+/* control-default/typo-placeholder */
+
+border: 1px solid #0078D2;
+border-radius: 16px;
+
+
+font-family: 'Segoe UI';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 32px;
+/* identical to box height, or 229% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* control-default/typo-placeholder */
+
+color: #0078D2;
+spacing:10px;
+}
+
+#CreSampBtn::hover {
+
+border: 1px solid rgb(0, 149, 255);
+color: rgb(0, 149, 255);
+}
+
+#CreSampBtn::pressed {
+border: 2px solid #0078D2;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Создать группу образцов</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/imgs/SampleBtnIcon.png</normaloff>:/imgs/SampleBtnIcon.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="tasks_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>126</y>
+        <width>209</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>209</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>209</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Действия */
+
+
+width: 95px;
+height: 30px;
+
+/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 30px */
+
+
+
+/* bg/shadow */
+
+color: #002033;</string>
+      </property>
+      <property name="text">
+       <string>Последние задачи</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>История</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_hist">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>74</y>
+        <width>1381</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>801</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#tableWidget_hist {
+/* Table */
+
+border: 1px solid rgba(0, 66, 105, 0.28);
+box-sizing: border-box;
+
+/* Auto layout */
+
+border-radius: 8px;
+/* control-default/bg-border */
+
+
+
+}
+
+#tableWidget_hist QHeaderView::section:first {
+
+border-top-left-radius: 8px;
+border-left: 1px solid rgba(0, 66, 105, 0.28);
+
+}
+
+#tableWidget_hist QHeaderView::section{
+/* S */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+
+
+color: #002033;
+
+
+height:58px;
+background: #FFFFFF;
+border-left: 0px solid rgba(0, 66, 105, 0.28);
+border-top: 1px solid rgba(0, 66, 105, 0.28);
+border-right: 1px solid rgba(0, 66, 105, 0.28);
+border-bottom: 1px solid rgba(0, 66, 105, 0.28);
+}
+
+#tableWidget_hist QHeaderView::section:last {
+
+border-top-right-radius: 8px;
+
+}
+
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="autoScrollMargin">
+       <number>12</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::NoDragDrop</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>150</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>10</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>  Номер</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>  Дата</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>  Наименование</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>  Результат 1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>  Результат 2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>  Длительность</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="tasks_label_hist">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>28</y>
+        <width>209</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>209</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>209</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Действия */
+
+
+width: 95px;
+height: 30px;
+
+/* XL */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+/* identical to box height, or 30px */
+
+
+
+/* bg/shadow */
+
+color: #002033;</string>
+      </property>
+      <property name="text">
+       <string>Последние задачи</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1440</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1440</width>
+      <height>64</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1440</width>
+      <height>64</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-bottom: 1px solid #ECF1F4;
+
+
+height: 64px;
+width: 1440px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>24</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>31</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="logo_label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>99</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>99</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/imgs/logo-gazprom-neft.png);
+padding-bottom: 8px;
+padding-top: 1px;
+border: 0px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignRight">
+      <widget class="QFrame" name="frame_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>22</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>28</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="user_label">
+          <property name="minimumSize">
+           <size>
+            <width>70</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>100</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">width: 75px;
+height: 14px;
+border:0px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 110%;
+/* identical to box height, or 13px */
+
+
+/* typo/secondary */
+
+color: rgba(0, 32, 51, 0.6);
+padding:0px;
+margin:0px;
+spacing:0px;</string>
+          </property>
+          <property name="text">
+           <string>Lab manager</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QPushButton" name="exit_pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#exit_pushButton{
+
+
+border: 0px;
+background: rgb(255, 255, 255);
+
+}
+#exit_pushButton::hover{
+background: rgb(205, 238, 255);
+
+}
+
+#exit_pushButton::pressed{
+
+border: 4px solid rgb(139, 205, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/imgs/IconExit.png</normaloff>:/imgs/IconExit.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplWidget</class>
+   <extends>QWidget</extends>
+   <header>mplwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

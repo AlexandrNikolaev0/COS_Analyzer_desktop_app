@@ -1,0 +1,17 @@
+drawnow
+gitdb
+GitPython
+inputs
+matplotlib
+messagebox
+numpy
+opencv-contrib-python
+opencv-python
+pandas
+Pillow
+pyinstaller
+pyinstaller-hooks-contrib
+pyserial
+PyQt5
+python-dateutil
+scipy
